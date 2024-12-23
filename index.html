@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Частотные характеристики - Расчет</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Расчет частотных характеристик систем</h1>
+        <form id="frequencyForm">
+            <div class="input-group">
+                <label for="amplitude">Амплитуда входного сигнала (A):</label>
+                <input type="number" id="amplitude" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="frequency">Частота входного сигнала (f) в Гц:</label>
+                <input type="number" id="frequency" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="resistance">Сопротивление (R) в Ом:</label>
+                <input type="number" id="resistance" required>
+            </div>
+            <div class="input-group">
+                <label for="capacitance">Емкость (C) в Ф:</label>
+                <input type="number" id="capacitance" step="0.000001" required>
+            </div>
+            <div class="input-group">
+                <label for="inductance">Индуктивность (L) в Гн:</label>
+                <input type="number" id="inductance" step="0.001" required>
+            </div>
+            <button type="button" id="calculate">Рассчитать</button>
+        </form>
+        <div class="results">
+            <h2>Результаты:</h2>
+            <p id="impedance">Импеданс системы (Z): <span>-</span> Ом</p>
+            <p id="phaseShift">Фазовый сдвиг (φ): <span>-</span> градусов</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
